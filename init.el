@@ -1,4 +1,5 @@
 ;;; init.el
+;; should work on >= emacs.23
 
 ;; remove window features that are not necessary
 ;;(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
@@ -10,9 +11,10 @@
 		    (or (buffer-file-name) load-file-name)))
 (add-to-list 'load-path dotfiles-dir)
 
-;; set some variables
-(setq inhibit-startup-message t
-      visible-bell 1)
+;; load additional files
+(load "misza222-bindings")
+(load "misza222-misc")
+
 
 ;; Keep system or user specific customizations here
 (setq system-specific-config (concat dotfiles-dir system-name ".el")
@@ -23,11 +25,7 @@
 ;;; init.el ends here
 
 
-;;; This was installed by package-install.el.
-;;; This provides support for the package system and
-;;; interfacing with ELPA, the package archive.
-;;; Move this code earlier if you want to reference
-;;; packages in your .emacs.
+;; elpa added config below
 (when
     (load
      (expand-file-name "~/.emacs.d/elpa/package.el"))
