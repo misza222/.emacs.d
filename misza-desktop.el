@@ -11,4 +11,5 @@
       '((left . 40) (top . 30)
         (width . 200) (height . 60)))
 
-(split-window-horizontally)
+;;(split-window-horizontally)
+;;(split-window-vertically)
