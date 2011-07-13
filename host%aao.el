@@ -1,3 +1,4 @@
+;;(split-window-horizontally)
 (setq scroll-step 10)
 
 (setq initial-frame-alist

@@ -22,7 +22,9 @@
 (ansi-color-for-comint-mode-on)
 
 (setq inhibit-startup-message t
-      visible-bell 1)
+      visible-bell t
+      require-final-newline t
+      column-number-mode t)
 
 (require 'recentf)
 (recentf-mode 1)
@@ -32,8 +34,5 @@
 (add-to-list 'auto-mode-alist '("COMMIT_EDITMSG$" . diff-mode))
 (add-to-list 'auto-mode-alist '("\\.css$" . css-mode))
 (add-to-list 'auto-mode-alist '("\\.ya?ml$" . yaml-mode))
-(add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.js\\(on\\)?$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.xml$" . nxml-mode))

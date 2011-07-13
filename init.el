@@ -2,9 +2,9 @@
 ;; should work on >= emacs.23
 
 ;; remove window features that are not necessary
-(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
-(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+(if (fboundp 'menu-bar-mode) (menu-bar-mode nil))
+(if (fboundp 'tool-bar-mode) (tool-bar-mode nil))
+(if (fboundp 'scroll-bar-mode) (scroll-bar-mode nil))
 
 ;; Set load path
 (setq dotfiles-dir (file-name-directory
@@ -20,8 +20,9 @@
 (setq system-specific-config (concat dotfiles-dir "host%" system-name ".el"))
 (if (file-exists-p system-specific-config) (load system-specific-config))
 
+;;(load "server")
+;;(unless (server-running-p) (server-start))
 ;;; init.el ends here
-
 
 ;; elpa added config below
 (when
