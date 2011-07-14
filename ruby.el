@@ -12,3 +12,8 @@
 (add-to-list 'auto-mode-alist '("\\.ru$" . ruby-mode)) ;; rackup config files
 (add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
+
+(add-hook 'haml-mode-hook
+	  '(lambda ()
+	     (setq indent-tabs-mode nil)
+	     (define-key haml-mode-map "\C-m" 'newline-and-indent)))
