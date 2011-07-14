@@ -24,7 +24,10 @@
 (setq inhibit-startup-message t
       visible-bell t
       require-final-newline t
-      column-number-mode t)
+      column-number-mode t
+
+      ;; Allows traversing through mark ring with C-<SPC> after first C-u C-<SPC>
+      set-mark-command-repeat-pop t)
 
 (require 'recentf)
 (recentf-mode 1)

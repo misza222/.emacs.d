@@ -15,6 +15,7 @@
 (load "bindings")
 (load "misc")
 (load "ruby")
+(load "haml")
 
 ;; Keep system or user specific customizations here
 (setq system-specific-config (concat dotfiles-dir "host%" system-name ".el"))
