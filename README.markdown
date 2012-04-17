@@ -56,3 +56,5 @@ M-/ - completion (subsequent traverses through gueses)
 C-M-\ - indent block
 listen on from 32'
 markers
+
+C-x C-w - save as
