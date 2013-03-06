@@ -1,4 +1,4 @@
-# Key bindings #
+/# Key bindings #
 
 ```
             M-<                 
@@ -83,3 +83,7 @@ listen on from 32'
 markers
 
 C-x C-w - save as
+
+Kill buffer
+
+C-x k
